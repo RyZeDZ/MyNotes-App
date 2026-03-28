@@ -9,7 +9,7 @@
     android:clipToPadding="false">
 
     <View
-        android:id="@+id/leftBorder"
+        android:id="@+id/noteActionLeftBorder"
         android:layout_width="4dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_note_card_left_border"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNoteTitle"
+        android:id="@+id/tvNoteActionTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -28,11 +28,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btnAction"
-        app:layout_constraintStart_toEndOf="@+id/leftBorder"
+        app:layout_constraintStart_toEndOf="@+id/noteActionLeftBorder"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNoteSubtitle"
+        android:id="@+id/tvNoteActionSubtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -41,11 +41,11 @@
         android:textColor="@color/textSecondary"
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/btnAction"
-        app:layout_constraintStart_toEndOf="@+id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/tvNoteTitle" />
+        app:layout_constraintStart_toEndOf="@+id/noteActionLeftBorder"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoteActionTitle" />
 
     <TextView
-        android:id="@+id/tvNoteDate"
+        android:id="@+id/tvNoteActionDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -55,8 +55,8 @@
         android:textColor="@color/textSecondary"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/tvNoteSubtitle" />
+        app:layout_constraintStart_toEndOf="@+id/noteActionLeftBorder"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoteActionSubtitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAction"

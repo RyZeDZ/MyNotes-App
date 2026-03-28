@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="accent">#6D28D9</color>
+    <color name="primary">#7C3AED</color>
+    <color name="disabled">#A1A1AB</color>
+    <color name="cardBg">#FFFFFF</color>
+    <color name="screenBg">#F3F4F6</color>
+    <color name="textPrimary">#111827</color>
+    <color name="textSecondary">#6B7280</color>
+    <color name="green">#22C55E</color>
+    <color name="greenLight">#1A22C55E</color>
+    <color name="red">#EF4444</color>
 </resources>

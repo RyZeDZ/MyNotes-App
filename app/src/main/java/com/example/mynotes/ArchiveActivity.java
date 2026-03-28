@@ -1,6 +1,7 @@
 package com.example.mynotes;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +26,9 @@ public class ArchiveActivity extends AppCompatActivity {
         notes.add(new Note("Exam schedule S5", "Finals: Jan 15 to Jan 28", "Jan 5"));
         notes.add(new Note("Recipe -- Tiramisu", "Traditional Friday recipe...", "Dec 20"));
         notes.add(new Note("Network notes", "TCP/IP, OSI model summary", "Nov 30"));
+
+        TextView tvArchievedCount = findViewById(R.id.tvArchivedCount);
+        tvArchievedCount.setText(getString(R.string.label_archived_count, notes.size()));
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

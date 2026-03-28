@@ -4,6 +4,7 @@
     <string name="note_subtitle">Note preview text</string>
     <string name="note_date">Mar 10</string>
     <string name="screen_archive">Archive</string>
+    <string name="label_archived_count">%d ARCHIVED NOTES</string>
     <string name="btn_unarchive">Unarchive</string>
     <string name="screen_notes">Notes</string>
     <string name="screen_trash">Trash</string>

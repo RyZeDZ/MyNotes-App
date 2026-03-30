@@ -55,6 +55,7 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             h.subtitle.setText(noteAction.subtitle);
             h.date.setText(noteAction.date);
             h.date.setTextColor(ContextCompat.getColor(h.itemView.getContext(), noteAction.dateColorResId));
+            h.btnAction.setText(noteAction.buttonText);
             h.leftBorder.getBackground().setTint(
                     ContextCompat.getColor(h.itemView.getContext(), noteAction.colorResId));
             int btnColor = ContextCompat.getColor(h.itemView.getContext(), noteAction.buttonColorResId);
@@ -75,7 +76,6 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             for (int i = 0; i < noteLabel.topics.size(); i++) {
                 Chip chip = new Chip(h.itemView.getContext());
                 int chipColor = ContextCompat.getColor(h.itemView.getContext(), noteLabel.topicColors.get(i));
-                int transparentColor = Color.argb(30, Color.red(chipColor), Color.green(chipColor), Color.blue(chipColor));
                 chip.setText(noteLabel.topics.get(i));
                 chip.setTextColor(chipColor);
                 chip.setChipStrokeColor(ColorStateList.valueOf(0));
@@ -104,7 +104,7 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             subtitle = itemView.findViewById(R.id.tvNoteActionSubtitle);
             date = itemView.findViewById(R.id.tvNoteActionDate);
             leftBorder = itemView.findViewById(R.id.noteActionLeftBorder);
-            btnAction = itemView.findViewById(R.id.btnAction);
+            btnAction = itemView.findViewById(R.id.btnActionNote);
         }
     }
 

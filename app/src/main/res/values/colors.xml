@@ -5,6 +5,7 @@
     <color name="accent">#6D28D9</color>
     <color name="primary">#7C3AED</color>
     <color name="disabled">#A1A1AB</color>
+    <color name="disabledLight">#e6e6e6</color>
     <color name="cardBg">#FFFFFF</color>
     <color name="screenBg">#F4F4F3</color>
     <color name="separator">#E4E4E6</color>
@@ -14,4 +15,5 @@
     <color name="greenLight">#1A16A34A</color>
     <color name="red">#EF4444</color>
     <color name="redLight">#1AEF4444</color>
+    <color name="profileBg">#EDE9FE</color>
 </resources>

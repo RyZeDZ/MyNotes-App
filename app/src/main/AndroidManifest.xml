@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNotes">
         <activity
-            android:name=".TrashActivity"
+            android:name=".SettingsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TrashActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ArchiveActivity" />
     </application>

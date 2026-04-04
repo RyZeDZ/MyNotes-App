@@ -3,4 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="accent">#6D28D9</color>
+    <color name="text_gray_light">#6B7280</color>
+    <color name="bg_light">#E9E9E9</color>
+    <color name="gray_bg">#6B7280</color>
+    <color name="bg_tint_light">#E9E9E9</color>
+    <color name="button_light">#FFFBFB</color>
+    <color name="bg_soft_gray">#E2E0E0</color>
+    <color name="gray_text">#888888</color>
 </resources>

@@ -69,30 +69,36 @@
             app:layout_constraintTop_toTopOf="@+id/editText5"
             tools:layout_editor_absoluteX="331dp" />
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="336dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="296dp"
+            android:background="#B192F0"
+            android:text="Continue withe Google"
+            app:cornerRadius="30dp" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="333dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="296dp"
+            android:text="@string/sign_in"
+            android:textSize="16sp"
+            app:cornerRadius="10dp" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/button14"
         android:layout_width="333dp"
         android:layout_height="63dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="380dp"
+        android:background="#665151"
         android:text="Sign In"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="336dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="396dp"
-        android:background="#B192F0"
-        android:text="Continue withe Google"
-        app:cornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,6 +107,8 @@
         android:layout_width="333dp"
         android:layout_height="63dp"
         android:layout_marginTop="520dp"
+        android:background="#E2E0E0"
+        android:backgroundTint="#E2E0E0"
         android:text="Sign In"
         app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"

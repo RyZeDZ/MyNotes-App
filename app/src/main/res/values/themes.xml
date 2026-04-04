@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.MyNotes" parent="Base.Theme.MyNotes" />
+    <style name="Theme.MyNotes" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 </resources>

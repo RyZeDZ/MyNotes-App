@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MyNotes</string>
+    <string name="logo_m">M</string>
+    <string name="register_create_account">Create account</string>
+    <string name="register_fill_details">Fill in your details</string>
+    <string name="register_name">Full name</string>
+    <string name="register_mail">E-mail</string>
+    <string name="register_af">Afrah</string>
+    <string name="register_univ">afrah@univ-oeb.dz</string>
+    <string name="register_ar">afrahriad</string>
+    <string name="register_pass">Password</string>
+    <string name="register_cp">Confirm Password</string>
+    <string name="register_already">Alreadu have an account?</string>
+    <string name="register_sign_in">Sign in</string>
+    <string name="liset_my_note">My Notes</string>
+    <string name="three_dots">…</string>
+    <string name="liset_serach">Search notes</string>
 </resources>

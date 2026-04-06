@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="accent">#6D28D9</color>
+    <color name="gray">#A1A1A8</color>
+    <color name="background">#F9F9F9</color>
+    <color name="border">#E4E4E6</color>
 </resources>

@@ -10,4 +10,16 @@
     <string name="screen_trash">Trash</string>
     <string name="btn_restore">Restore</string>
     <string name="label_days_left">%d days left</string>
+    <string name="list_my_notes">My Notes</string>
+    <string name="list_all">All</string>
+    <string name="list_work">Work</string>
+    <string name="list_study">Study</string>
+    <string name="list_personal">Prsonal</string>
+    <string name="list_ideas">Ideas</string>
+    <string name="detail_mobile">Mobile dev TP notes</string>
+    <string name="detail_key">Key features fo UI:</string>
+    <string name="detail_notes">Notes titel and content fields \nAdd,edit,arcgive,delete\n Search by titel or contet \nOrganize by topics \n Trash before permanent delete</string>
+    <string name="detail_point">• \n• \n• \n• \n• </string>
+    <string name="detail_time">Mar 27,9:15 AM</string>
+    <string name="detail_reminder">⏰Reminder:Mar 30,8:00 AM</string>
 </resources>

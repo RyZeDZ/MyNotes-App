@@ -3,4 +3,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="accent">#6D28D9</color>
+    <color name="primary">#7C3AED</color>
+    <color name="disabled">#A1A1AB</color>
+    <color name="cardBg">#FFFFFF</color>
+    <color name="screenBg">#F4F4F3</color>
+    <color name="separator">#E4E4E6</color>
+    <color name="textPrimary">#111827</color>
+    <color name="textSecondary">#6B7280</color>
+    <color name="green">#16A34A</color>
+    <color name="greenLight">#1A16A34A</color>
+    <color name="red">#EF4444</color>
 </resources>

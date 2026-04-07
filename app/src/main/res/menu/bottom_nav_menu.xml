@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_notes"
+        android:title="@string/screen_notes"
+        android:icon="@drawable/ic_notes"/>
+    <item
+        android:id="@+id/nav_archive"
+        android:title="@string/screen_archive"
+        android:icon="@drawable/ic_archieve"/>
+    <item
+        android:id="@+id/nav_trash"
+        android:title="@string/screen_trash"
+        android:icon="@drawable/ic_trash"/>
+</menu>

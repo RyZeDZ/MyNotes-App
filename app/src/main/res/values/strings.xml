@@ -12,4 +12,17 @@
     <string name="trash_warning">Notes are permanently deleted after 30 days</string>
     <string name="btn_restore">Restore</string>
     <string name="label_days_left">%d days left</string>
+    <string name="screen_settings">Settings</string>
+    <string name="settings_user_name">Mohamed</string>
+    <string name="settings_user_email">mohamed@univ-oeb.dz</string>
+    <string name="settings_section_preferences">PREFERENCES</string>
+    <string name="settings_section_data">DATA</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_value">English</string>
+    <string name="settings_accent_color">Accent Color</string>
+    <string name="settings_dark_mode">Dark mode</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_backup">Backup notes</string>
+    <string name="settings_backup_subtitle">Last backup: 2 hours ago</string>
+    <string name="settings_sign_out">Sign out</string>
 </resources>

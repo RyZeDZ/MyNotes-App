@@ -16,4 +16,10 @@
     <color name="red">#EF4444</color>
     <color name="redLight">#1AEF4444</color>
     <color name="profileBg">#EDE9FE</color>
+    <color name="topicStudy">#EDE9FE</color>
+    <color name="topicWork">#DBEAFE</color>
+    <color name="topicPersonal">#DCFCE7</color>
+    <color name="topicIdeas">#FEF9C3</color>
+    <color name="topicProjects">#FFE4E6</color>
+    <color name="topicIconBackground">#F3F4F6</color>
 </resources>

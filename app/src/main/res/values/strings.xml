@@ -25,4 +25,7 @@
     <string name="settings_backup">Backup notes</string>
     <string name="settings_backup_subtitle">Last backup: 2 hours ago</string>
     <string name="settings_sign_out">Sign out</string>
+    <string name="screen_topics">Topics</string>
+    <string name="btn_new_topic">+ New topic</string>
+    <string name="topic_notes_count">%d notes</string>
 </resources>

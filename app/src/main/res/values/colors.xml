@@ -11,6 +11,10 @@
     <color name="textPrimary">#111827</color>
     <color name="textSecondary">#6B7280</color>
     <color name="green">#16A34A</color>
+    <color name="disabledLight">#e6e6e6</color>
     <color name="greenLight">#1A16A34A</color>
     <color name="red">#EF4444</color>
+    <color name="redlight">#1AEF4444</color>
+    <color name="profileBg">#EDE9FE</color>
+
 </resources>

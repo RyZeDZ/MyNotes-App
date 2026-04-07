@@ -10,4 +10,10 @@
     <string name="screen_trash">Trash</string>
     <string name="btn_restore">Restore</string>
     <string name="label_days_left">%d days left</string>
+    <string name="all"> All</string>
+    <string name="title">title</string>
+    <string name="content">content</string>
+    <string name="results_for_mobile_dev">"3 RESULTS FOR MOBILE DEV"</string>
+    <string name="mobile_dev">🔍 mobile dev</string>
+    <string name="search">Search</string>
 </resources>

@@ -33,4 +33,6 @@
     <color name="gray">#A1A1A8</color>
     <color name="background">#F9F9F9</color>
     <color name="border">#E4E4E6</color>
+    <color name="redlight">#1AEF4444</color>
+
 </resources>

@@ -64,4 +64,8 @@
     <string name="liset_study">Study</string>
     <string name="liset_personal">Personal</string>
     <string name="liset_ideas">Ideas</string>
+    <string name="all"> All</string>
+    <string name="title">title</string>
+    <string name="content">content</string>
+    <string name="results_for_mobile_dev">"3 RESULTS FOR MOBILE DEV"</string>
 </resources>

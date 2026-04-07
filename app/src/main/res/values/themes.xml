@@ -7,5 +7,5 @@
         <item name="colorPrimary">@color/primary</item>
     </style>
 
-    <style name="Theme.MyNotes" parent="Base.Theme.MyNotes" />
+    <style name="Theme.MyNotes" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 </resources>

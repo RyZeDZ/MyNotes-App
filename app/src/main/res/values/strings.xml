@@ -15,5 +15,16 @@
     <string name="content">content</string>
     <string name="results_for_mobile_dev">"3 RESULTS FOR MOBILE DEV"</string>
     <string name="mobile_dev">🔍 mobile dev</string>
+    <string name="new_note">New Note</string>
+    <string name="si"> ← </string>
+    <string name="save">Save</string>
+    <string name="topic">+topic</string>>
+    <string name="Study">Study</string>
+    <string name="Note_title_here...">Note title here...</string>
+    <string name="Start">Start writing your note here. you can add text,list and more...</string>
+    <string name="n">.</string>
+    <string name="first_bullet_point">First bullet point</string>
+    <string name="Second_bullet_point">Second bullet point</string>
+
     <string name="search">Search</string>
 </resources>

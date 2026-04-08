@@ -29,8 +29,8 @@
     <string name="btn_new_topic">+ New topic</string>
     <string name="topic_notes_count">%d notes</string>
     <string name="m">M</string>
-    <string name="my_note">My Note</string>
-    <string name="welcom_back">Welcom back</string>
+    <string name="my_note">MyNotes</string>
+    <string name="welcome_back">Welcome back</string>
     <string name="email">Email</string>
     <string name="student_univ_oeb_dz">         student@univ-oeb.dz</string>
     <string name="s_">         .........</string>
@@ -53,7 +53,7 @@
     <string name="register_ar">afrahriad</string>
     <string name="register_pass">Password</string>
     <string name="register_cp">Confirm password</string>
-    <string name="register_passhint">…</string>
+    <string name="register_passhint">••••••••</string>
     <string name="register_already">Already have an account?</string>
     <string name="register_sign_in">Sign in</string>
     <string name="liset_my_note">My Notes</string>
@@ -73,8 +73,8 @@
     <string name="save">Save</string>
     <string name="topic">+topic</string>>
     <string name="Study">Study</string>
-    <string name="Note_title_here...">Note title here...</string>
-    <string name="Start">Start writing your note here. you can add text,list and more...</string>
+    <string name="Note_title_here...">Note title here…</string>
+    <string name="Start">Start writing your note here. you can add text,list and more…</string>
     <string name="n">.</string>
     <string name="first_bullet_point">First bullet point</string>
     <string name="Second_bullet_point">Second bullet point</string>
@@ -83,11 +83,12 @@
     <string name="list_work">Work</string>
     <string name="list_study">Study</string>
     <string name="list_personal">Prsonal</string>
-    <string name="list_ideas">Ideas</string>
+    <string name="list_addnew">+ New</string>
     <string name="detail_mobile">Mobile dev TP notes</string>
     <string name="detail_key">Key features fo UI:</string>
     <string name="detail_notes">Notes titel and content fields \nAdd,edit,arcgive,delete\n Search by titel or contet \nOrganize by topics \n Trash before permanent delete</string>
     <string name="detail_point">• \n• \n• \n• \n• </string>
     <string name="detail_time">Mar 27,9:15 AM</string>
     <string name="detail_reminder">⏰Reminder:Mar 30,8:00 AM</string>
+    <string name="settings">settings</string>
 </resources>

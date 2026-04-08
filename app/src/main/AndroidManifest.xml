@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -16,15 +15,17 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".TrashActivity" />
         <activity android:name=".ArchiveActivity" />
-        <activity android:name=".TopicsActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".ListActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".TopicsActivity" />
+        <activity android:name=".TrashActivity" />
     </application>
 
 </manifest>

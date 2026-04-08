@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="5dp"
-    app:layout_marginBaseline="48dp"
     app:layout_scrollFlags="noScroll"
+    android:background="@color/screenBg"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <TextView
@@ -24,7 +24,6 @@
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +36,7 @@
         android:text="@string/register_create_account"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/textPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -47,20 +47,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register_fill_details"
-        android:textColor="#A1A1A8"
+        android:textColor="@color/textSecondary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="312dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="8dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/accent"
         android:text="@string/register_create_account"
-        android:textSize="20sp"
+        android:textSize="16sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:paddingVertical="15dp"
+        app:cornerRadius="15dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
@@ -77,12 +82,14 @@
         android:ems="10"
         android:hint="@string/register_af"
         android:inputType="text"
-        android:padding="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
+        android:textColorHighlight="@color/textPrimary"
+        android:textColorHint="@color/textSecondary"
+        android:textColorLink="@color/textPrimary"
+        android:textColor="@color/textPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -99,14 +106,15 @@
         android:ems="10"
         android:hint="@string/register_univ"
         android:inputType="textEmailAddress"
-        android:padding="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorLink="@color/black"
+        android:textColor="@color/textPrimary"
+        android:textColorHighlight="@color/textPrimary"
+        android:textColorLink="@color/textPrimary"
+        android:textColorHint="@color/textSecondary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -122,9 +130,12 @@
         android:ems="10"
         android:hint="@string/register_passhint"
         android:inputType="textPassword"
-        android:padding="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
+        android:textColorHint="@color/textSecondary"
+        android:textColor="@color/textPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -136,7 +147,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/register_name"
-        android:textColor="#A1A1A8"
+        android:textColor="@color/textSecondary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -148,7 +159,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="@string/register_mail"
-        android:textColor="#A1A1A8"
+        android:textColor="@color/textSecondary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
@@ -160,7 +171,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="@string/register_pass"
-        android:textColor="#A1A1A8"
+        android:textColor="@color/textSecondary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
@@ -173,7 +184,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="@string/register_cp"
-        android:textColor="#A1A1A8"
+        android:textColor="@color/textSecondary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
@@ -191,23 +202,25 @@
         android:ems="10"
         android:hint="@string/register_passhint"
         android:inputType="textPassword"
-        android:padding="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
+        android:textColor="@color/textPrimary"
+        android:textColorHint="@color/textSecondary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister">
 
         <TextView
             android:id="@+id/textView12"
@@ -220,7 +233,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"

@@ -1,5 +1,6 @@
 package com.example.mynotes;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,5 +36,19 @@ public class TrashActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
         bottomNav.setSelectedItemId(R.id.nav_trash);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_notes) {
+                startActivity(new Intent(this, ListActivity.class));
+                finish();
+            } else if (id == R.id.nav_archive) {
+                startActivity(new Intent(this, ArchiveActivity.class));
+                finish();
+            } else if (id == R.id.nav_trash) {
+                startActivity(new Intent(this, TrashActivity.class));
+                finish();
+            }
+            return true;
+        });
     }
 }

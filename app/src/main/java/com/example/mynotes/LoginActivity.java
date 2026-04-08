@@ -1,12 +1,16 @@
 package com.example.mynotes;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.button.MaterialButton;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,6 +23,21 @@ public class LoginActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        MaterialButton btnLogin = findViewById(R.id.btnLogin);
+        MaterialButton btnLoginGoogle = findViewById(R.id.btnLoginGoogle);
+        TextView tvRegister = findViewById(R.id.tvRegister);
+        btnLogin.setOnClickListener(v -> {
+            startActivity(new Intent(this, ListActivity.class));
+            finish();
+        });
+        btnLoginGoogle.setOnClickListener(v -> {
+            startActivity(new Intent(this, ListActivity.class));
+            finish();
+        });
+        tvRegister.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
         });
     }
 }

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">MyNotes</string>
-    <string name="note_title">Note title</string>
-    <string name="note_subtitle">Note preview text</string>
-    <string name="note_date">Mar 10</string>
+    <string name="app_name" translatable="false">MyNotes</string>
+    <string name="note_title" translatable="false">Note title</string>
+    <string name="note_subtitle" translatable="false">Note preview text</string>
+    <string name="note_date" translatable="false">Mar 10</string>
     <string name="screen_archive">Archive</string>
     <string name="label_archived_count">%d ARCHIVED NOTES</string>
     <string name="btn_unarchive">Unarchive</string>
@@ -13,8 +13,8 @@
     <string name="btn_restore">Restore</string>
     <string name="label_days_left">%d days left</string>
     <string name="screen_settings">Settings</string>
-    <string name="settings_user_name">Mohamed</string>
-    <string name="settings_user_email">mohamed@univ-oeb.dz</string>
+    <string name="settings_user_name" translatable="false">Mohamed</string>
+    <string name="settings_user_email" translatable="false">mohamed@univ-oeb.dz</string>
     <string name="settings_section_preferences">PREFERENCES</string>
     <string name="settings_section_data">DATA</string>
     <string name="settings_language">Language</string>
@@ -28,12 +28,12 @@
     <string name="screen_topics">Topics</string>
     <string name="btn_new_topic">+ New topic</string>
     <string name="topic_notes_count">%d notes</string>
-    <string name="m">M</string>
-    <string name="my_note">MyNotes</string>
+    <string name="m" translatable="false">M</string>
+    <string name="my_note" translatable="false">MyNotes</string>
     <string name="welcome_back">Welcome back</string>
     <string name="email">Email</string>
-    <string name="student_univ_oeb_dz">         student@univ-oeb.dz</string>
-    <string name="s_">         .........</string>
+    <string name="student_univ_oeb_dz" translatable="false">         student@univ-oeb.dz</string>
+    <string name="s_" translatable="false">         .........</string>
     <string name="sign_in">Sign In</string>
     <string name="Password">Password</string>
     <string name="forgot_password">Forgot password?</string>
@@ -43,13 +43,13 @@
     <string name="or">or</string>
     <string name="search">Search</string>
     <string name="mobile_dev">🔍 mobile dev</string>
-    <string name="logo_m">M</string>
+    <string name="logo_m" translatable="false">M</string>
     <string name="register_create_account">Create account</string>
     <string name="register_fill_details">Fill in your details</string>
     <string name="register_name">Full name</string>
     <string name="register_mail">E-mail</string>
     <string name="register_af">Afrah</string>
-    <string name="register_univ">afrah@univ-oeb.dz</string>
+    <string name="register_univ" translatable="false">afrah@univ-oeb.dz</string>
     <string name="register_ar">afrahriad</string>
     <string name="register_pass">Password</string>
     <string name="register_cp">Confirm password</string>
@@ -57,7 +57,7 @@
     <string name="register_already">Already have an account?</string>
     <string name="register_sign_in">Sign in</string>
     <string name="liset_my_note">My Notes</string>
-    <string name="three_dots">•••••</string>
+    <string name="three_dots" translatable="false">•••••</string>
     <string name="liset_serach">Search notes</string>
     <string name="liset_all">All</string>
     <string name="liset_work">Work</string>
@@ -75,7 +75,7 @@
     <string name="Study">Study</string>
     <string name="Note_title_here...">Note title here…</string>
     <string name="Start">Start writing your note here. you can add text,list and more…</string>
-    <string name="n">.</string>
+    <string name="n" translatable="false">.</string>
     <string name="first_bullet_point">First bullet point</string>
     <string name="Second_bullet_point">Second bullet point</string>
     <string name="list_my_notes">My Notes</string>

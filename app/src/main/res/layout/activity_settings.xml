@@ -57,7 +57,7 @@
                     android:height="64dp"
                     android:background="@drawable/bg_color"
                     android:gravity="center"
-                    android:text="M"
+                    android:text="@string/m"
                     android:textColor="@color/white"
                     android:textSize="32sp"
                     android:textStyle="bold" />
@@ -70,7 +70,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/tvUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -80,7 +80,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView7"
+                        android:id="@+id/tvEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -114,6 +114,7 @@
 
                 <ImageView
                     android:id="@+id/imageView3"
+                    android:contentDescription="@string/settings_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_color_grey_rounded"
@@ -168,6 +169,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_palette"
+                    android:contentDescription="@string/settings_accent_color"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="16dp"
@@ -218,6 +220,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_darkmode"
+                    android:contentDescription="@string/settings_dark_mode"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="16dp"
@@ -267,6 +270,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_notification"
+                    android:contentDescription="@string/settings_notifications"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="16dp"
@@ -330,6 +334,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_cloud"
+                    android:contentDescription="@string/settings_backup"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="16dp"
@@ -377,6 +382,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_logout"
+                    android:contentDescription="@string/settings_sign_out"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="16dp"
@@ -384,7 +390,7 @@
                     android:padding="10dp"/>
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/tvLogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

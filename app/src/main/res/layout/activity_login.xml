@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="15dp"
@@ -81,6 +81,7 @@
         android:textColorHint="@color/textSecondary"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView47" />
@@ -97,10 +98,10 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText7"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -110,13 +111,13 @@
         android:background="@drawable/search_bg"
         android:textColor="@color/textPrimary"
         android:hint="@string/register_passhint"
+        android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColorHint="@color/textSecondary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
@@ -131,7 +132,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"

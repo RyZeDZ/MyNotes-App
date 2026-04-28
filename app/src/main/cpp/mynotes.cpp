@@ -4,12 +4,12 @@
 //
 // For instance,
 //
-// In MainActivity.java:
+// In RegisterActivity.java:
 //    static {
 //       System.loadLibrary("mynotes");
 //    }
 //
-// Or, in MainActivity.kt:
+// Or, in RegisterActivity.kt:
 //    companion object {
 //      init {
 //         System.loadLibrary("mynotes")

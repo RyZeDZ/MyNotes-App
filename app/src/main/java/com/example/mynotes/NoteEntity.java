@@ -16,4 +16,6 @@ public class NoteEntity {
     public boolean isTrashed = false;
     public String userId = "";
     public long createdAt = 0;
+    public long deletedAt = 0;
+    public long reminderTime = 0;
 }

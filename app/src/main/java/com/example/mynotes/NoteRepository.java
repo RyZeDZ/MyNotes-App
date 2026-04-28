@@ -47,9 +47,8 @@ public class NoteRepository {
         note.userId = userId;
         note.id = UUID.randomUUID().toString();
         note.createdAt = System.currentTimeMillis();
-        note.date = new SimpleDateFormat("MMM dd", Locale.getDefault())
-                .format(new Date());
 
+        note.date = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(new Date());
         Executors.newSingleThreadExecutor().execute(() -> noteDao.insert(note));
 
         db.collection("users").document(userId)

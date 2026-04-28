@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
+
 @Dao
 public interface NoteDao {
     @Query("SELECT * FROM notes WHERE isArchived = 0 AND isTrashed = 0 AND userId = :userId ORDER BY createdAt DESC")

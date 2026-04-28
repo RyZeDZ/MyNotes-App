@@ -1,8 +1,10 @@
 package com.example.mynotes;
 
 public class Note {
+    String id;
     String title;
     String subtitle;
+    String fullContent;
     String date;
     int colorResId;
     int dateColorResId;

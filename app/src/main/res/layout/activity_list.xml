@@ -86,55 +86,44 @@
         </LinearLayout>
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup2"
+    <HorizontalScrollView
+        android:id="@+id/scrollChips"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
+        android:scrollbars="none"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/divider3">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primary"
-            android:text="@string/list_all"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:singleSelection="true">
 
-            android:textColor="@color/white" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/all"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"/>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_work"
-            android:textColor="@color/disabled" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNew"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus_new"
+                android:textColor="@color/textSecondary"/>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_study"
-            android:textColor="@color/disabled" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_personal"
-            android:textColor="@color/disabled" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipNew"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_addnew"
-            android:clickable="true"
-            android:textColor="@color/disabled" />
-    </com.google.android.material.chip.ChipGroup>
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -145,7 +134,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollChips"
         app:layout_constraintVertical_bias="1.0" />
 
 

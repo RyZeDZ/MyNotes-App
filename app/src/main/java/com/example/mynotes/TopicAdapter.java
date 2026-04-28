@@ -1,5 +1,6 @@
 package com.example.mynotes;
 
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,15 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private static final int TYPE_FOOTER = 1;
 
     List<Topic> topics;
+    private DeleteCallback deleteCallback;
 
-    public TopicAdapter(List<Topic> topics) {
+    public interface DeleteCallback {
+        void onDelete(int position);
+    }
+
+    public TopicAdapter(List<Topic> topics, DeleteCallback deleteCallback) {
         this.topics = topics;
+        this.deleteCallback = deleteCallback;
     }
 
     @Override
@@ -29,9 +36,7 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     @Override
-    public int getItemCount() {
-        return topics.size() + 1;
-    }
+    public int getItemCount() { return topics.size() + 1; }
 
     @NonNull
     @Override
@@ -53,21 +58,35 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             TopicViewHolder h = (TopicViewHolder) holder;
             Topic topic = topics.get(position);
             h.topicName.setText(topic.name);
-            h.topicCount.setText(
-                    holder.itemView.getContext()
-                            .getString(R.string.topic_notes_count, topic.noteCount)
-            );
+            h.topicCount.setText(holder.itemView.getContext()
+                    .getString(R.string.topic_notes_count, topic.noteCount));
             h.topicIcon.setText(topic.emoji);
             h.topicIcon.getBackground().setTint(
-                    ContextCompat.getColor(holder.itemView.getContext(), topic.iconBgColor)
-            );
+                    ContextCompat.getColor(holder.itemView.getContext(), topic.iconBgColor));
+
+            h.ibMore.setOnClickListener(v -> {
+                new AlertDialog.Builder(v.getContext())
+                        .setTitle("Delete topic?")
+                        .setMessage("\"" + topic.name + "\" will be deleted.")
+                        .setPositiveButton("Delete", (d, w) -> {
+                            if (deleteCallback != null) deleteCallback.onDelete(holder.getAdapterPosition());
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
+            });
+
+        } else if (holder instanceof FooterViewHolder) {
+            holder.itemView.setOnClickListener(v -> {
+                if (v.getContext() instanceof TopicsActivity) {
+                    ((TopicsActivity) v.getContext()).showCreateTopicDialog();
+                }
+            });
         }
     }
 
     static class TopicViewHolder extends RecyclerView.ViewHolder {
         TextView topicName, topicCount, topicIcon;
         ImageButton ibMore;
-
         public TopicViewHolder(@NonNull View itemView) {
             super(itemView);
             topicName = itemView.findViewById(R.id.tvTopicName);
@@ -78,8 +97,6 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     static class FooterViewHolder extends RecyclerView.ViewHolder {
-        public FooterViewHolder(@NonNull View itemView) {
-            super(itemView);
-        }
+        public FooterViewHolder(@NonNull View itemView) { super(itemView); }
     }
 }

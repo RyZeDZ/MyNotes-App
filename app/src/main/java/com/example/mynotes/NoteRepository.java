@@ -116,8 +116,12 @@ public class NoteRepository {
         return noteDao.getNotesWithReminders();
     }
 
-    public LiveData<List<NoteEntity>> getNotesByTopic(String topic) {
-        return noteDao.getNotesByTopic(userId, topic);
+    public LiveData<List<NoteEntity>> getNotesByTopic(String topicId) {
+        return noteDao.getNotesByTopic(userId, topicId);
+    }
+
+    public LiveData<NoteEntity> getNoteById(String id) {
+        return noteDao.getNoteById(id);
     }
 
 }

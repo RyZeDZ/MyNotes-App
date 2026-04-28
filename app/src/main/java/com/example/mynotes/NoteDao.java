@@ -19,9 +19,6 @@ public interface NoteDao {
     @Query("SELECT * FROM notes WHERE userId = :userId AND isTrashed = 0 AND (title LIKE '%' || :query || '%' OR content LIKE '%' || :query || '%')")
     LiveData<List<NoteEntity>> searchNotes(String userId, String query);
 
-    @Query("SELECT * FROM notes WHERE userId = :userId AND isTrashed = 0 ORDER BY createdAt DESC")
-    LiveData<List<NoteEntity>> getRecentNotes(String userId);
-
     @Query("DELETE FROM notes WHERE isTrashed = 1 AND deletedAt < :timeLimit")
     void deleteOldTrashedNotes(long timeLimit);
 
@@ -35,12 +32,15 @@ public interface NoteDao {
 
     @Query("SELECT * FROM notes WHERE reminderTime IS NOT NULL")
     LiveData<List<NoteEntity>> getNotesWithReminders();
-    @Query("SELECT * FROM notes WHERE userId = :userId AND topicId = :topic AND isTrashed = 0")
-    LiveData<List<NoteEntity>> getNotesByTopic(String userId, String topic);
+    @Query("SELECT * FROM notes WHERE isArchived = 0 AND isTrashed = 0 AND userId = :userId AND topicId = :topicId ORDER BY createdAt DESC")
+    LiveData<List<NoteEntity>> getNotesByTopic(String userId, String topicId);
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(NoteEntity note);
     @Update
     void update(NoteEntity note);
     @Delete
     void delete(NoteEntity note);
+
+    @Query("SELECT * FROM notes WHERE id = :id LIMIT 1")
+    LiveData<NoteEntity> getNoteById(String id);
 }

@@ -2,7 +2,6 @@ package com.example.mynotes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,40 +21,50 @@ public class ArchiveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trash);
+        setContentView(R.layout.activity_archive);
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         NoteViewModel viewModel = new ViewModelProvider(this).get(NoteViewModel.class);
         viewModel.init(this);
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         viewModel.getArchivedNotes().observe(this, noteEntities -> {
             List<Note> notes = new ArrayList<>();
             for (NoteEntity entity : noteEntities) {
-                notes.add(new NoteAction(
+                NoteAction note = new NoteAction(
                         entity.title,
-                        entity.content,
+                        entity.content.length() > 50 ? entity.content.substring(0, 50) + "..." : entity.content,
                         entity.date,
-                        "Restore",
+                        "Unarchive",
                         R.color.primary,
                         R.color.textSecondary,
-                        R.color.primary
-                ));
+                        R.color.green
+                );
+                note.id = entity.id;
+                note.fullContent = entity.content;
+                notes.add(note);
             }
-            adapter = new NoteAdapter(notes);
+            adapter = new NoteAdapter(notes, new NoteAdapter.ActionCallback() {
+                @Override
+                public void onActionClick(String noteId) {
+                    viewModel.getNoteById(noteId).observe(ArchiveActivity.this, note -> {
+                        if (note != null) viewModel.restoreNote(note);
+                    });
+                }
+            });
             recyclerView.setAdapter(adapter);
-            TextView tvCount = findViewById(R.id.tvArchivedCount);
-            tvCount.setText(noteEntities.size() + " TRASH NOTES");
         });
+
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
-        bottomNav.setSelectedItemId(R.id.nav_trash);
+        bottomNav.setSelectedItemId(R.id.nav_archive);
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_notes) {
                 startActivity(new Intent(this, ListActivity.class));
                 finish();
             } else if (id == R.id.nav_archive) {
-                startActivity(new Intent(this, ArchiveActivity.class));
-                finish();
+                return true;
             } else if (id == R.id.nav_trash) {
                 startActivity(new Intent(this, TrashActivity.class));
                 finish();

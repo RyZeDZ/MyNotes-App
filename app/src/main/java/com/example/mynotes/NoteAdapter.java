@@ -1,5 +1,6 @@
 package com.example.mynotes;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -20,9 +21,15 @@ import java.util.List;
 public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     List<Note> notes;
+    private ActionCallback callback;
+
 
     public NoteAdapter(List<Note> notes) {
         this.notes = notes;
+    }
+    public NoteAdapter(List<Note> notes, ActionCallback callback) {
+        this.notes = notes;
+        this.callback = callback;
     }
 
     @Override
@@ -62,6 +69,9 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             h.btnAction.setTextColor(btnColor);
             h.btnAction.setStrokeColor(ColorStateList.valueOf(btnColor));
             h.btnAction.setBackgroundTintList(ColorStateList.valueOf(btnColor).withAlpha(30));
+            if (callback != null) {
+                h.btnAction.setOnClickListener(v -> callback.onActionClick(noteAction.id));
+            }
 
         } else if (holder instanceof NoteLabelViewHolder) {
             NoteLabelViewHolder h = (NoteLabelViewHolder) holder;
@@ -85,6 +95,13 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 chip.setClickable(false);
                 h.chipGroup.addView(chip);
             }
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(v.getContext(), NewNoteActivity.class);
+                intent.putExtra("note_id", noteLabel.id);
+                intent.putExtra("note_title", noteLabel.title);
+                intent.putExtra("note_content", noteLabel.fullContent);
+                v.getContext().startActivity(intent);
+            });
         }
     }
 
@@ -121,5 +138,9 @@ public class NoteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             leftBorder = itemView.findViewById(R.id.noteLabelLeftBorder);
             chipGroup = itemView.findViewById(R.id.chipGroup);
         }
+    }
+
+    public interface ActionCallback {
+        void onActionClick(String noteId);
     }
 }

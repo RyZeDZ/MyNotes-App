@@ -4,7 +4,7 @@
     <string name="note_subtitle" translatable="false">Note preview text</string>
     <string name="note_date" translatable="false">Mar 10</string>
     <string name="screen_archive">Archive</string>
-    <string name="label_archived_count">%d ARCHIVED NOTES</string>
+    <string name="label_archived_count">ARCHIVED NOTES</string>
     <string name="btn_unarchive">Unarchive</string>
     <string name="screen_notes">Notes</string>
     <string name="screen_trash">Trash</string>
@@ -91,4 +91,10 @@
     <string name="detail_time">Mar 27,9:15 AM</string>
     <string name="detail_reminder">⏰Reminder:Mar 30,8:00 AM</string>
     <string name="settings">settings</string>
+    <string name="plus_topic" translatable="false">+ Topic</string>
+    <string name="note_content_here" translatable="false">Note content here</string>
+    <string name="plus_new" translatable="false">+ New</string>
+    <string name="archive" translatable="false">Archive</string>
+    <string name="delete">Delete</string>
+    <string name="savee" translatable="false">Save</string>
 </resources>

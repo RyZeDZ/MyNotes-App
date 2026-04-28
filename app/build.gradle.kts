@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.room.runtime)
+    implementation(libs.room.common.jvm)
     annotationProcessor(libs.room.compiler)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)

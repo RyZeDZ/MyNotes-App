@@ -3,6 +3,7 @@ package com.example.mynotes;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,12 +27,17 @@ public class TopicsActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_back);
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        topics = new ArrayList<>();
-        topics.add(new Topic("Study", "📚", 8, R.color.topicStudy));
-        topics.add(new Topic("Work", "💼", 5, R.color.topicWork));
-        topics.add(new Topic("Personal", "🏠", 12, R.color.topicPersonal));
-        topics.add(new Topic("Ideas", "💡", 3, R.color.topicIdeas));
-        topics.add(new Topic("Projects", "🎯", 6, R.color.topicProjects));
+        TopicViewModel viewModel = new ViewModelProvider(this).get(TopicViewModel.class);
+        viewModel.init(this);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        viewModel.getAllTopics().observe(this, topicEntities -> {
+            List<Topic> topics = new ArrayList<>();
+            for (TopicEntity entity : topicEntities) {
+                topics.add(new Topic(entity.name, entity.emoji, 0, entity.colorResId));
+            }
+            TopicAdapter adapter = new TopicAdapter(topics);
+            recyclerView.setAdapter(adapter);});
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

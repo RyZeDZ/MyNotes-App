@@ -3,6 +3,7 @@ package com.example.mynotes;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,10 +21,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        notes = new ArrayList<>();
-        notes.add(new NoteLabel("Mobile dev TP", "Notes app: add, edit, archive...", "Mar 27", R.color.green, R.color.textSecondary, List.of("Study"), List.of(R.color.green)));
-        notes.add(new NoteLabel("Android for mobile", "Install android studio...", "Mar 25", R.color.black, R.color.textSecondary, List.of("Ideas"), List.of(R.color.black)));
-
+        NoteViewModel viewModel = new ViewModelProvider(this).get(NoteViewModel.class);viewModel.init(this);// replace etSearch with the actual ID of the search EditTextetSearch.addTextChangedListener(new TextWatcher() { @Override public void onTextChanged(CharSequence s, int start, int before, int count) { String query = s.toString().trim(); if (!query.isEmpty()) { viewModel.searchNotes(query).observe(SearchActivity.this, results -> { List<Note> notes = new ArrayList<>(); for (NoteEntity entity : results) { notes.add(new NoteLabel( entity.title, entity.content, entity.date, R.color.primary, R.color.textSecondary, new ArrayList<>(), new ArrayList<>() )); } NoteAdapter adapter = new NoteAdapter(notes); recyclerView.setAdapter(adapter); // update result count text tvResultCount.setText(results.size() + " RESULTS FOR \"" + query.toUpperCase() + "\""); }); } } @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {} @Override public void afterTextChanged(android.text.Editable s) {}});
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
